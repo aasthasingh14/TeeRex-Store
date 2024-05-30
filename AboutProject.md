@@ -12,7 +12,7 @@ Welcome to the T-Shirt Store project! This application is a simple e-commerce pl
 - **Shopping Cart**: Add t-shirts to a shopping cart, adjust quantities, and remove items.
 - **Local Storage**: Persist cart items in the local storage so that the cart remains intact on page refresh.
 - **Responsive Design**: The application is fully responsive and scales gracefully across various devices, ensuring a seamless user experience on desktops, tablets, and smartphones.
-- **State Management**: Uses React's `useState` hook for efficient state management, enabling dynamic updates to the UI based on user interactions.
+- **State Management**: Uses React's `useState` hook for efficient state management, enabling dynamic updates to the UI based on user interactions. Once add to cart is clicked the quantity decreases and increments in Cart. Any increase and decrease in quantity in cart also reflects in Product i.e, in home page. The navbar count of cart only increases when any new item is added. With this even the total amount also changes.
 
 ### Technologies Used
 
