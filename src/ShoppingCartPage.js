@@ -62,7 +62,7 @@ function ShoppingCartPage({ cart, updateCart }) {
             <Col></Col>
             <Col></Col>
             <Col></Col>
-            <Col><h3>Total: ${totalAmount.toFixed(2)}</h3></Col>
+            <Col><h3>Total: ₹{totalAmount.toFixed(2)}</h3></Col>
           </Row>
         </div>
       )}
