@@ -46,7 +46,7 @@ function ShoppingCartPage({ cart, updateCart }) {
                 <img src={item.image} alt={item.name} style={{ width: '100px', height: '100px', marginRight: '10px' }} />
                 {item.name}
               </Col>
-              <Col xs={4} sm={3} md={2}>${item.price.toFixed(2)}</Col>
+              <Col xs={4} sm={3} md={2}>₹{item.price.toFixed(2)}</Col>
               <Col xs={4} sm={3} md={2}>
                 <Button variant="outline-secondary" onClick={() => decreaseQuantity(item.id)}>-</Button>
                 <span className="mx-2">{item.quantity}</span>
