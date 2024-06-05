@@ -6,7 +6,7 @@ import HomePage from './HomePage';
 import ShoppingCartPage from './ShoppingCartPage';
 
 const initialTShirts = [
-  { id: 1, name: 'Red Polo', color: 'Red', type: 'Polo', price: 250, gender: 'Men', availableQty: 10, image: require('./assets/redpolo.png') },
+  { id: 1, name: 'Red Polo', color: 'Red', type: 'Polo', price: 250, gender: 'Men', availableQty: 0, image: require('./assets/redpolo.png') },
   { id: 2, name: 'Blue T-Shirt', color: 'Blue', type: 'T-Shirt', price: 599, gender: 'Women', availableQty: 5, image: require('./assets/blue-tshirt.png') },
   { id: 3, name: 'Green Polo', color: 'Green', type: 'Polo', price: 399, gender: 'Men', availableQty: 8, image: require('./assets/green-polo.png') },
   { id: 4, name: 'Red T-Shirt', color: 'Red', type: 'T-Shirt', price: 499, gender: 'Women', availableQty: 12, image: require('./assets/red-tshirt.png') },

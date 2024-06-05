@@ -7,6 +7,7 @@ function HomePage({ tShirts, addToCart, searchTerm }) {
     gender: [],
     color: [],
     type: [],
+    available :[],
     priceRange: "",
   });
 
@@ -32,6 +33,15 @@ function HomePage({ tShirts, addToCart, searchTerm }) {
     }
   };
 
+  // const handleAvalabilityChnage = (e) =>{
+  //   if(availableQty == 0 ){
+  //     setFilters({
+  //       ...filters,
+  //       [available]:[filters[]]
+  //     })
+  //   }
+  // }
+
   const getPriceRange = (price) => {
     if (price >= 0 && price <= 100) return "0-100";
     if (price > 100 && price <= 500) return "100-500";
@@ -50,6 +60,10 @@ function HomePage({ tShirts, addToCart, searchTerm }) {
         filters.color.some(
           (color) => tShirt.color.toLowerCase() === color.toLowerCase()
         )) &&
+        ((filters.available.length === 0 ) || 
+       (tShirt.availableQty > 0 && filters.available.includes('available')) ||
+       (tShirt.availableQty === 0 && filters.available.includes('notavailable'))
+      ) &&
       (filters.type.length === 0 ||
         filters.type.some(
           (type) => tShirt.type.toLowerCase() === type.toLowerCase()
@@ -226,6 +240,34 @@ function HomePage({ tShirts, addToCart, searchTerm }) {
                         checked={filters.priceRange === "1000+"}
                         onChange={handleFilterChange}
                       />
+                    </div>
+                  </Form.Group>
+                </Col>
+              </Row>
+              <Row className="mb-3">
+              <Col>
+                  <Form.Group>
+                    <Form.Label className="custom-label">
+                      Avaliability
+                    </Form.Label>
+                    <div className="type">
+                      <Form.Check
+                        type="checkbox"
+                        label="available"
+                        name="available"
+                        value="available"
+                        checked={filters.available.includes('available')}
+                        onChange={handleFilterChange}
+                      />
+                      <Form.Check
+                        type="checkbox"
+                        label="not available"
+                        name="available"
+                        value="notavailable"
+                        checked={filters.available.includes('notavailable')}
+                        onChange={handleFilterChange}
+                      />
+                       
                     </div>
                   </Form.Group>
                 </Col>
